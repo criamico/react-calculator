@@ -1,6 +1,6 @@
 import React from 'react';
-import NumButton from './components/num-button.jsx';
-import Calc from './calculator';
+import NumButton from './num-button.jsx';
+import Calc from '../calculator';
 
 const defaultState = {
   value: '0'
