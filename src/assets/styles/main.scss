@@ -1,11 +1,11 @@
-$bg-color: #72ffd4;
+$bg-color: #5890ad;
 $bg-input-color: white;
-$keypad-color: #403f3c;
-$keypad-column-color: #71706d;
+$keypad-color: #f3f3f3;
+$keypad-column-color: #ddd;
 $keypad-spacing: 100%;
-$font-digits-color: white;
+$font-digits-color: black;
 $font-input-color: #71706d;
-$font-result-color: #959492;
+$border-color: #c1c0bd;
 $breakpoint-mobile: 400px;
 $main-width: 380px;
 
@@ -17,7 +17,7 @@ body {
 
 button {
   font-family: 'Roboto', sans-serif;
-  font-size: 2.3em;
+  font-size: 2.2em;
   color: $font-digits-color;
   background-color: $keypad-color;
   margin: 8px;
@@ -42,6 +42,7 @@ main {
   width: $keypad-spacing;
   margin: 0 auto;
   display: flex;
+  border-top: 1px solid $border-color;
 }
 
 .keypad-col-1 {
@@ -52,7 +53,6 @@ main {
 .keypad-col-2 {
   flex-direction: column;
   width: 20%;
-  padding: 10px 0;
   background-color: $keypad-column-color;
 
   button {
@@ -65,6 +65,7 @@ main {
 .display-div {
   padding: 5px 10px;
   background-color: $bg-input-color;
+  // box-shadow: inset hoff voff blur $font-input-color;
 
   p {
     text-align: right;
