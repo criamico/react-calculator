@@ -3,7 +3,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const autoprefixer = require('autoprefixer');
 // const BundleAnalyzerPlugin =
 // require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
@@ -46,7 +45,7 @@ module.exports = {
         test : /\.jsx?/,
         include : SRC_DIR,
         exclude: /node_modules/,
-        use : ['babel-loader']
+        use : 'babel-loader'
         // use : ['react-hot-loader', 'babel-loader']
       },
       // compiles scss files
@@ -59,11 +58,6 @@ module.exports = {
             options: {
               sourcemap: true
             }
-          },
-          { loader: 'postcss-loader',
-          	config: {
-          		path: __dirname + '/postcss.config.js'
-          	}
           },
           {
             loader: 'sass-loader',

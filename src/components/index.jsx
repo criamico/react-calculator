@@ -10,7 +10,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     App.displayName = 'App';
+
     this.state = defaultState;
+    this.testElement = document.getElementById('fcc_test_suite_wrapper');
   }
   setValue = (e) => {
     const initialValue =

@@ -5,16 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="React Basic Project" content="text">
-    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css%>">
+    <link rel="stylesheet" href="assets/styles/0.main.6ceb572572658f9f1737.css?164279aeb9a5169cb4db">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
     <title>React Calculator</title>
   </head>
 
   <body>
     <div id="app" />
-      <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
-      <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
-    <% } %>
+      
+      <script src="vendor.c7fd7e542986d3bfd5fa.js?164279aeb9a5169cb4db"></script>
+    
+      <script src="bundle.fcfad686509c5309b25b.js?164279aeb9a5169cb4db"></script>
+    
     <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
   </body>
 </html>

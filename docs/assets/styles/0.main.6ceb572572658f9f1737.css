@@ -1,0 +1,4 @@
+body{font-family:'Roboto', sans-serif;font-weight:100;background-color:#5890ad}button{font-family:'Roboto', sans-serif;font-size:2.2em;color:#000;background-color:#f3f3f3;margin:8px;padding:10px 20px;outline:none;border:none}main{width:100%;max-width:100%}.calculator{background-color:#f3f3f3;width:380px;text-align:center;margin:0 auto}.keypad{width:100%;margin:0 auto;display:flex;border-top:1px solid #c1c0bd}.keypad-col-1{width:80%;padding:10px 0}.keypad-col-2{flex-direction:column;width:20%;background-color:#ddd}.keypad-col-2 button{font-size:1.2em;background-color:#ddd;padding:13px 10px}.display-div{padding:5px 10px;background-color:#fff}.display-div p{text-align:right;color:#71706d;font-size:3em;font-family:'Roboto', sans-serif;font-weight:300}.author{width:380px;text-align:center;margin:0 auto}.author p{font-weight:300;color:#f3f3f3}@media screen and (max-width: 400px){.author,.calculator{width:100%}}
+
+
+/*# sourceMappingURL=0.main.6ceb572572658f9f1737.css.map*/
