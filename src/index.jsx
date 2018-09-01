@@ -41,6 +41,33 @@ class App extends React.Component {
 
   render() {
     const { value } = this.state;
+    const row1 = [
+      {value: '7', id: 'seven', displayValue: '7', onClick: this.setValue},
+      {value: '8', id: 'eight', displayValue: '8', onClick: this.setValue},
+      {value: '9', id: 'nine', displayValue: '9', onClick: this.setValue}
+    ];
+    const row2 = [
+      {value: '4', id: 'four', displayValue: '4', onClick: this.setValue},
+      {value: '5', id: 'five', displayValue: '5', onClick: this.setValue},
+      {value: '6', id: 'six', displayValue: '6', onClick: this.setValue}
+    ];
+    const row3 = [
+      {value: '1', id: 'one', displayValue: '1', onClick: this.setValue},
+      {value: '2', id: 'two', displayValue: '2', onClick: this.setValue},
+      {value: '3', id: 'three', displayValue: '3', onClick: this.setValue}
+    ];
+    const row4 = [
+      {value: '.', id: 'decimal', displayValue: '.', onClick: this.setValue},
+      {value: '0', id: 'zero', displayValue: '0', onClick: this.setValue},
+      {value: '=', id: 'equals', displayValue: '=', onClick: this.getResult}
+    ];
+    const column2 = [
+      {value: '+', id: 'add', displayValue: '+', onClick: this.setValue},
+      {value: '-', id: 'subtract', displayValue: '-', onClick: this.setValue},
+      {value: '*', id: 'multiply', displayValue: '*', onClick: this.setValue},
+      {value: '/', id: 'divide', displayValue: '/', onClick: this.setValue},
+      {value: 'CLR', id: 'clear', displayValue: 'CLR', onClick: this.resetValue}
+    ];
 
     return <React.Fragment>
       <div className="calculator">
@@ -55,117 +82,35 @@ class App extends React.Component {
         <div className="keypad">
           <div className="keypad-col-1">
             <div>
-              <NumButton
-                value='7'
-                displayValue='7'
-                id='seven'
-                onClick={this.setValue}
-              />
-              <NumButton
-                value='8'
-                displayValue='8'
-                id='eight'
-                onClick={this.setValue}
-              />
-              <NumButton
-                value='9'
-                displayValue='9'
-                id='nine'
-                onClick={this.setValue}
-              />
+              {row1.map((b, i) => <NumButton
+                key={i}
+                {...b}
+              />)}
             </div>
             <div>
-              <NumButton
-                value='4'
-                displayValue='4'
-                id='four'
-                onClick={this.setValue}
-              />
-              <NumButton
-                value='5'
-                displayValue='5'
-                id='five'
-                onClick={this.setValue}
-              />
-              <NumButton
-                value='6'
-                displayValue='6'
-                id='six'
-                onClick={this.setValue}
-              />
+              {row2.map((b, i) => <NumButton
+                key={i}
+                {...b}
+              />)}
             </div>
             <div>
-              <NumButton
-                value='1'
-                displayValue='1'
-                id='one'
-                onClick={this.setValue}
-              />
-              <NumButton
-                value='2'
-                displayValue='2'
-                id='two'
-                onClick={this.setValue}
-              />
-              <NumButton
-                value='3'
-                displayValue='3'
-                id='three'
-                onClick={this.setValue}
-              />
+              {row3.map((b, i) => <NumButton
+                key={i}
+                {...b}
+              />)}
             </div>
             <div>
-              <NumButton
-                value='.'
-                displayValue='.'
-                id="decimal"
-                onClick={this.setValue}
-              />
-              <NumButton
-                value='0'
-                displayValue='0'
-                id='zero'
-                onClick={this.setValue}
-              />
-              <NumButton
-                value='='
-                displayValue='='
-                id="equals"
-                onClick={this.getResult}
-              />
+              {row4.map((b, i) => <NumButton
+                key={i}
+                {...b}
+              />)}
             </div>
           </div>
           <div className="keypad-col-2">
-            <NumButton
-              value='+'
-              displayValue='+'
-              id="add"
-              onClick={this.setValue}
-            />
-            <NumButton
-              value='-'
-              displayValue='-'
-              id="subtract"
-              onClick={this.setValue}
-            />
-            <NumButton
-              value='*'
-              displayValue='*'
-              id="multiply"
-              onClick={this.setValue}
-            />
-            <NumButton
-              value='/'
-              displayValue='/'
-              id="divide"
-              onClick={this.setValue}
-            />
-            <NumButton
-              value='CLR'
-              displayValue='CLR'
-              id="clear"
-              onClick={this.resetValue}
-            />
+            {column2.map((b, i) => <NumButton
+              key={i}
+              {...b}
+            />)}
           </div>
         </div>
       </div>
